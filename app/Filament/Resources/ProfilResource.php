@@ -43,10 +43,7 @@ class ProfilResource extends Resource
                     ->label('Misi')
                     ->limit(50),
             ])
-            ->filters([
-                Tables\Filters\SelectFilter::make('kategori_id')
-                    ->relationship('kategori', 'jenis_kegiatan')
-            ])
+            ->filters([])
             ->actions([
                 Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
