@@ -29,17 +29,22 @@
         <x-profil class="bg-white"></x-profil>
     </div>
 
-    <x-kepegawaian></x-kepegawaian>
+    <x-kepegawaian>
+        <x-button-link href="/datakepegawaian">Lihat Semua Pegawai</x-button-link>
+    </x-kepegawaian>
+
 
     <x-program-unggulan>
-        <x-button-link>Lihat Semua Program</x-button-link>
+        <x-button-link href="/programunggulan">Lihat Semua Program</x-button-link>
     </x-program-unggulan>
 
+    <div class="py-16 bg-gray-50 text-center">
+        <h2 class="text-3xl font-bold mb-4">Berita Terkini</h2>
+        <div class="w-20 h-1 bg-yellow-400 mx-auto"></div>
+    </div>
     <x-berita>
         <div class="mt-12 text-center">
-            <a href="/berita"
-                class="inline-block border border-gray-600 hover:border-yellow-500 text-gray-600 hover:bg-yellow-400 hover:text-white px-6 py-3 rounded-lg font-medium transition-all shadow-lg">Arsip
-                Berita</a>
+            <x-button-link href="/berita">Lihat Semua Berita</x-button-link>
         </div>
     </x-berita>
 

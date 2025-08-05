@@ -12,5 +12,6 @@ class Kontak extends Model
         'email',
         'jam_operasional',
         'lokasi',
+        'maps_url',
     ];
 }

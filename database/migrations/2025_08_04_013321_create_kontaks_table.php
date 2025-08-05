@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('jam_operasional');
             $table->string('lokasi');
+            $table->string('maps_url');
             $table->timestamps();
         });
     }

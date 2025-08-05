@@ -36,12 +36,8 @@ class ProfilResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('visi')
-                    ->label('Visi')
-                    ->limit(50),
+                Tables\Columns\TextColumn::make('visi'),
                 Tables\Columns\TextColumn::make('misi')
-                    ->label('Misi')
-                    ->limit(50),
             ])
             ->filters([])
             ->actions([

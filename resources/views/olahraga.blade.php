@@ -7,5 +7,5 @@
                 <div class="w-20 h-1 bg-yellow-400 mx-auto"></div>
             </div>
             </selection>
-
+            <x-footer></x-footer>
 </x-layout>

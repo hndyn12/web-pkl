@@ -34,6 +34,9 @@ class KontakResource extends Resource
                 Forms\Components\FileUpload::make('lokasi')
                     ->required()
                     ->columnSpanFull(),
+                Forms\Components\RichEditor::make('maps_url')
+                    ->required()
+                    ->columnSpanFull(),
             ]);
     }
 
@@ -46,6 +49,8 @@ class KontakResource extends Resource
                 Tables\Columns\TextColumn::make('telepon'),
                 Tables\Columns\TextColumn::make('email'),
                 Tables\Columns\TextColumn::make('jam_operasional'),
+                Tables\Columns\TextColumn::make('maps_url'),
+
             ])
             ->filters([
                 //
