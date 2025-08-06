@@ -49,7 +49,7 @@
                                         Kepegawaian</a>
                                     <a id="menu-item-3" role="menuitem" href="/programunggulan" tabindex="-1"
                                         class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-700 hover:text-white">Program
-                                        Kegiatan</a>
+                                        Unggulan</a>
                                 </div>
                             </div>
                         </div>
@@ -281,7 +281,7 @@
                     <a href="/datakepegawaian"
                         class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Data Kepegawaian</a>
                     <a href="/programunggulan"
-                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Program Kegiatan</a>
+                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Program Unggulan</a>
                 </div>
                 <button @click="isBidangOpen = !isBidangOpen; isProfileOpen = false; isReportOpen = false; isHukumOpen = false;"
                     class="block w-full text-left rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">

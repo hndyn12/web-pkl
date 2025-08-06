@@ -12,4 +12,9 @@ class Activity extends Model
     {
         return $this->belongsTo(Kategori::class, 'kategori_id');
     }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

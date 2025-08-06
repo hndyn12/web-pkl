@@ -1,9 +1,22 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Models\Activity;
+use App\Models\Employee;
+use App\Models\News;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home', ['title' => 'HOME']);
+    $employees = Employee::take(4)->get();
+    $news = News::take(3)->get();
+    $activities = Activity::take(3)->get();
+
+    return view('home', [
+        'title' => 'HOME',
+        'employees' => $employees,
+        'news' => $news,
+        'activities' => $activities,
+    ]);
 });
 
 Route::get('/sekretariat', function () {
@@ -19,7 +32,7 @@ Route::get('/datakepegawaian', function () {
 });
 
 Route::get('/programunggulan', function () {
-    return view('programunggulan', ['title' => 'PROGRAM UNGGULAN']);
+    return view('programunggulan', ['title' => 'PROGRAM UNGGULAN', 'activity' => Activity::all()]);
 });
 
 Route::get('/kontakkami', function () {
@@ -35,5 +48,19 @@ Route::get('/olahraga', function () {
 });
 
 Route::get('/berita', function () {
-    return view('berita', ['title' => 'BERITA']);
+    return view('berita', ['title' => 'BERITA', 'news' => News::all()]);
+});
+
+Route::get('/berita/{news:slug}', function (News $news) {
+    return view('bacaberita', [
+        'title' => 'BERITA',
+        'item' => $news
+    ]);
+});
+
+Route::get('/programunggulan/{activity:slug}', function (Activity $activity) {
+    return view('bacaprogram', [
+        'title' => 'PROGRAM UNGGULAN',
+        'activity' => $activity,
+    ]);
 });
