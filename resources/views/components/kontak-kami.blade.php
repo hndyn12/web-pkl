@@ -10,7 +10,7 @@
                 <div class="lg:w-1/2">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17219.80630273163!2d112.18099645894071!3d-8.083211590378598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78ed0073c16f6f%3A0xc7c5b67e2d846942!2sDINAS%20KEPEMUDAAN%20DAN%20OLAHRAGA%20KABUPATEN%20BLITAR!5e0!3m2!1sid!2sid!4v1754361784157!5m2!1sid!2sid"
-                        width="775" height="720" style="border:5px;" allowfullscreen loading="lazy"
+                        width="775" height="850" style="border:5px;" allowfullscreen loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
@@ -19,6 +19,10 @@
                         <h3 class="text-xl font-semibold text-gray-800 mb-6">Informasi Kontak</h3>
 
                         <div class="space-y-6">
+                            @php
+                                // Ambil misi, hilangkan tag HTML, lalu pecah berdasarkan titik koma
+                                $misiPoints = explode(';', strip_tags($kontak->kontak));
+                            @endphp
                             <div class="flex items-start">
                                 <div class="flex-shrink-0 mt-1">
                                     <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor"
@@ -61,7 +65,7 @@
                                 </div>
                                 <div class="ml-4">
                                     <h4 class="text-lg font-medium text-gray-800">Email</h4>
-                                    <p class="text-gray-600">{{ $kontak->email }}</p>
+                                    <p class="text-gray-600">{!! \Illuminate\Support\Str::of($kontak->email)->sanitizeHtml() !!}</p>
                                 </div>
                             </div>
                             <div class="flex items-start">
@@ -69,12 +73,13 @@
                                     <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z">
+                                        </path>
                                     </svg>
                                 </div>
                                 <div class="ml-4">
                                     <h4 class="text-lg font-medium text-gray-800">Jam Operasional</h4>
-                                    <p class="text-gray-600">{{ $kontak->jam_operasional }}</p>
+                                    <p class="text-gray-600">{!! \Illuminate\Support\Str::of($kontak->jam_operasional)->sanitizeHtml() !!}</p>
                                 </div>
                             </div>
                         </div>

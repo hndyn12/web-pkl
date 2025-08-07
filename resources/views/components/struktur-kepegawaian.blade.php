@@ -4,11 +4,12 @@
           <h2 class="text-3xl font-bold text-gray-800 mb-4">Struktur Organisasi</h2>
           <div class="w-20 h-1 bg-yellow-400 mx-auto"></div>
       </div>
-      <div class="bg-grey-500 p-6 rounded-xl shadow-md border border-gray-100">
-          <img src="/image/struktur-kepegawaian.jpg" alt="Diagram struktur organisasi Dinas Pemuda dan Olahraga"
-              class="w-200 h-auto mx-auto">
+      <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-100">
+          <img src="{{ asset('image/Struktur-Kepegawaian.png') }}"
+              alt="Diagram struktur organisasi Dinas Pemuda dan Olahraga" class="w-full max-w-4xl h-auto mx-auto">
           <div class="mt-6 text-center">
-              <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800">
+              <a href="{{ asset('storage/Struktur-Kepegawaian.png') }}" download
+                  class="inline-flex items-center text-blue-600 hover:text-blue-800">
                   Download Struktur Organisasi Lengkap
                   <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

@@ -18,7 +18,7 @@ class ProfilResource extends Resource
 {
     protected static ?string $model = Profil::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-home';
 
     public static function form(Form $form): Form
     {

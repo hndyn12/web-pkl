@@ -2,10 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\EmployeeResource\Pages;
-use App\Filament\Resources\EmployeeResource\RelationManagers;
-use App\Http\Resources\Employee as ResourcesEmployee;
-use App\Models\Employee;
+use App\Filament\Resources\FasilitasResource\Pages;
+use App\Filament\Resources\FasilitasResource\RelationManagers;
+use App\Models\Fasilitas;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,23 +12,27 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use ResourceBundle;
 
-class EmployeeResource extends Resource
+class FasilitasResource extends Resource
 {
-    protected static ?string $model = Employee::class;
+    protected static ?string $model = Fasilitas::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-user-group';
+    protected static ?string $navigationIcon = 'heroicon-o-rocket-launch';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('nama')
+                Forms\Components\TextInput::make('nama_fasilitas')
                     ->required(),
-                Forms\Components\TextInput::make('jabatan')
+                Forms\Components\FileUpload::make('gambar')
+                    ->required()
+                    ->columnSpanFull(),
+                Forms\Components\TextInput::make('lokasi')
                     ->required(),
-                Forms\Components\FileUpload::make('foto')
+                Forms\Components\TextInput::make('link_maps')
+                    ->required(),
+
             ]);
     }
 
@@ -37,10 +40,10 @@ class EmployeeResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('foto')
-                    ->circular(),
-                Tables\Columns\TextColumn::make('nama'),
-                Tables\Columns\TextColumn::make('jabatan'),
+                Tables\Columns\TextColumn::make('nama_fasilitas'),
+                Tables\Columns\ImageColumn::make('gambar'),
+                Tables\Columns\TextColumn::make('lokasi'),
+                Tables\Columns\TextColumn::make('link_maps'),
             ])
             ->filters([
                 //
@@ -67,9 +70,9 @@ class EmployeeResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListEmployees::route('/'),
-            'create' => Pages\CreateEmployee::route('/create'),
-            'edit' => Pages\EditEmployee::route('/{record}/edit'),
+            'index' => Pages\ListFasilitas::route('/'),
+            'create' => Pages\CreateFasilitas::route('/create'),
+            'edit' => Pages\EditFasilitas::route('/{record}/edit'),
         ];
     }
 }

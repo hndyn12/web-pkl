@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot:title>{{ $title }}</x-slot:title>
-    <section id="contact" class="py-16 bg-gray-50">
+    <section id="contact" class="py-10 bg-gray-50">
         <div class="container mx-auto px-4 flex flex-col items-center justify-center min-h-[70vh]">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">{{ $title }}</h2>
@@ -29,23 +29,20 @@
                                 <div
                                     class="regulation-card bg-gray-50 p-5 rounded-lg border border-gray-200 transition-all duration-300">
                                     <h3 class="text-lg font-semibold text-blue-700 flex items-center">
-                                        <span
-                                            class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">PERBUP
-                                            TAHUN 2022</span>
                                         Peraturan Bupati Blitar No 116 Tahun 2022
                                     </h3>
                                     <p class="text-gray-600 mt-2 text-left">Tentang Kedudukan, Susunan Organisasi,
                                         Tugas dan Fungsi,
                                         serta tata kerja Dinas Kepemudaan dan Olahraga Kabupaten Blitar</p>
-                                    <div class="mt-3 flex items-center justify-start text-sm text-gray-500">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none"
-                                            viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                        </svg>
-                                        Diundangkan 20 September 2022
-                                    </div>
-                                    <div class="mt-3 flex justify-start space-x-3">
+                                    <div class="mt-3 flex items-center justify-between text-sm text-gray-500">
+                                        <div class="flex items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                            </svg>
+                                            Diundangkan 20 September 2022
+                                        </div>
                                         <a href="{{ asset('dokumen/PERBUP 116 TAHUN 2022 TENTANG SOTK DINAS KEPEMUDAAN DAN OLAHRAGA.pdf') }}"
                                             class="text-blue-600 hover:text-blue-800 text-sm font-medium inline-flex items-center"
                                             target="_blank" rel="noopener">
@@ -55,16 +52,6 @@
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M9 5l7 7-7 7" />
                                             </svg>
-                                        </a>
-                                        <a href="#"
-                                            class="text-gray-500 hover:text-gray-700 text-sm font-medium inline-flex items-center">
-                                            <span class="tooltip-container relative">
-                                                Info Singkat
-                                                <div class="tooltip">
-                                                    UU yang mengatur tentang Dinas Kepemudaan dan Olahraga Kabupaten
-                                                    Blitar
-                                                </div>
-                                            </span>
                                         </a>
                                     </div>
                                 </div>

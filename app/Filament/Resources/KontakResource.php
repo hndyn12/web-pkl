@@ -17,7 +17,7 @@ class KontakResource extends Resource
 {
     protected static ?string $model = Kontak::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-identification';
 
     public static function form(Form $form): Form
     {
@@ -27,9 +27,9 @@ class KontakResource extends Resource
                     ->required(),
                 Forms\Components\TextInput::make('telepon')
                     ->required(),
-                Forms\Components\TextInput::make('Email')
+                Forms\Components\RichEditor::make('email')
                     ->required(),
-                Forms\Components\TextInput::make('jam_operasional')
+                Forms\Components\RichEditor::make('jam_operasional')
                     ->required(),
                 Forms\Components\FileUpload::make('lokasi')
                     ->required()

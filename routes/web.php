@@ -64,3 +64,42 @@ Route::get('/programunggulan/{activity:slug}', function (Activity $activity) {
         'activity' => $activity,
     ]);
 });
+
+Route::get('/calk', function () {
+    return view('calk', ['title' => 'CALK']);
+});
+
+Route::get('/dataaset', function () {
+    return view('dataaset', ['title' => 'DATA ASET']);
+});
+
+Route::get('/realisasianggaran', function () {
+    return view('realisasianggaran', ['title' => 'REALISASI ANGGARAN']);
+});
+
+Route::get('/rkpd', function () {
+    return view('rkpd', ['title' => 'RKPD']);
+});
+
+Route::get('/lkpj', function () {
+    return view('lkpj', ['title' => 'LKPJ']);
+});
+
+Route::get('/sakip', function () {
+    return view('sakip', ['title' => 'SAKIP']);
+});
+
+Route::get('/renja', function () {
+    return view('renja', ['title' => 'RENJA']);
+});
+
+Route::get('/renstra', function () {
+    return view('renstra', ['title' => 'RENSTRA']);
+});
+
+Route::get('/perbup', function () {
+    return view('perbup', ['title' => 'PERBUP']);
+});
+Route::get('/perda', function () {
+    return view('perda', ['title' => 'PERDA']);
+});

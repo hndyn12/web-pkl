@@ -127,17 +127,17 @@
                                             aria-labelledby="menu-button" aria-orientation="vertical"
                                             class="absolute left-57 top-0 z-10 mt-1 w-56 origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-hidden">
                                             <div role="none" class="py-1">
-                                                <a id="menu-item-0" role="menuitem" href="/sekretariat"
+                                                <a id="menu-item-0" role="menuitem" href="/calk"
                                                     tabindex="-1"
                                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-700 hover:text-white">CALK</a>
-                                                <a id="menu-item-1" role="menuitem" href="/dasarhukum"
+                                                <a id="menu-item-1" role="menuitem" href="/dataaset"
                                                     tabindex="-1"
                                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-700 hover:text-white">Data
                                                     Aset</a>
-                                                <a id="menu-item-2" role="menuitem" href="#" tabindex="-1"
+                                                <a id="menu-item-2" role="menuitem" href="/realisasianggaran" tabindex="-1"
                                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-700 hover:text-white">Realisasi
                                                     Anggaran</a>
-                                                <a id="menu-item-3" role="menuitem" href="#" tabindex="-1"
+                                                <a id="menu-item-3" role="menuitem" href="/rkpd" tabindex="-1"
                                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-700 hover:text-white">RKPD</a>
                                             </div>
                                         </div>
@@ -165,10 +165,10 @@
                                             aria-labelledby="menu-button" aria-orientation="vertical"
                                             class="absolute left-57 top-10 z-10 mt-1 w-56 origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-hidden">
                                             <div role="none" class="py-1">
-                                                <a id="menu-item-0" role="menuitem" href="/sekretariat"
+                                                <a id="menu-item-0" role="menuitem" href="/lkpj"
                                                     tabindex="-1"
                                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-700 hover:text-white">LKPJ</a>
-                                                <a id="menu-item-1" role="menuitem" href="/dasarhukum"
+                                                <a id="menu-item-1" role="menuitem" href="/sakip"
                                                     tabindex="-1"
                                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-700 hover:text-white">Sakip</a>
                                             </div>
@@ -197,10 +197,10 @@
                                             aria-labelledby="menu-button" aria-orientation="vertical"
                                             class="absolute left-57 top-20 z-10 mt-1 w-56 origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-hidden">
                                             <div role="none" class="py-1">
-                                                <a id="menu-item-0" role="menuitem" href="/sekretariat"
+                                                <a id="menu-item-0" role="menuitem" href="/renja"
                                                     tabindex="-1"
                                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-700 hover:text-white">Renja</a>
-                                                <a id="menu-item-1" role="menuitem" href="/dasarhukum"
+                                                <a id="menu-item-1" role="menuitem" href="/renstra"
                                                     tabindex="-1"
                                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-700 hover:text-white">Renstra</a>
                                             </div>
@@ -210,7 +210,7 @@
                             </div>
                         </div>
                         <x-nav-link href="berita" :active="request()->is('berita')">Berita</x-nav-link>
-                        <x-nav-link href="ppid" :active="request()->is('ppid')">PPID</x-nav-link>
+                        <x-nav-link href=https://ppid.blitarkab.go.id/ :active="request()->is('ppid')">PPID</x-nav-link>
                         <div>
                             <button id="menu-button"
                                 @click="isHukumOpen = !isHukumOpen; isProfileOpen = false; isBidangOpen = false; isReportOpen = false; isSubKeuangan = false; isSubKinerja = false; isSubPerencanaan = false"
@@ -232,9 +232,9 @@
                                 aria-labelledby="menu-button" aria-orientation="vertical"
                                 class="absolute left-169 z-10 mt-2 w-56 origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-hidden">
                                 <div role="none" class="py-1">
-                                    <a id="menu-item-0" role="menuitem" href="#" tabindex="-1"
+                                    <a id="menu-item-0" role="menuitem" href="/perbup" tabindex="-1"
                                         class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-700 hover:text-white">Perbup</a>
-                                    <a id="menu-item-1" role="menuitem" href="#" tabindex="-1"
+                                    <a id="menu-item-1" role="menuitem" href="/perda" tabindex="-1"
                                         class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-700 hover:text-white">Perda</a>
                                 </div>
                             </div>
@@ -288,9 +288,9 @@
                     Bidang
                 </button>
                 <div x-show="isBidangOpen" class="pl-4" x-transition>
-                    <a href="#"
+                    <a href="/kepemudaan"
                         class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Bidang Kepemudaan</a>
-                    <a href="#"
+                    <a href="/olahraga"
                         class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Bidang Olahraga</a>
                 </div>
                 <button @click="isReportOpen = !isReportOpen; isProfileOpen = false; isBidangOpen = false; isHukumOpen = false;"
@@ -303,13 +303,13 @@
                         Keuangan
                     </button>
                     <div x-show="isSubKeuangan" class="pl-4" x-transition>
-                        <a href="/sekretariat"
+                        <a href="/calk"
                             class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">CALK</a>
-                        <a href="/dasarhukum"
+                        <a href="/dataaset"
                             class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Data Aset</a>
-                        <a href="#"
+                        <a href="realisasianggaran"
                             class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Realisasi Anggaran</a>
-                        <a href="#"
+                        <a href="rkpd"
                             class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">RKPD</a>
                     </div>
                     <button @click="isSubKinerja = !isSubKinerja; isSubKeuangan = false; isSubPerencanaan = false;"
@@ -317,9 +317,9 @@
                         Kinerja
                     </button>
                     <div x-show="isSubKinerja" class="pl-4" x-transition>
-                        <a href="/sekretariat"
+                        <a href="/slkpj"
                             class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">LKPJ</a>
-                        <a href="/dasarhukum"
+                        <a href="/sakip"
                             class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Sakip</a>
                     </div>
                     <button @click="isSubPerencanaan = !isSubPerencanaan; isSubKeuangan = false; isSubKinerja = false;"
@@ -327,9 +327,9 @@
                         Perencanaan
                     </button>
                     <div x-show="isSubPerencanaan" class="pl-4" x-transition>
-                        <a href="/sekretariat"
+                        <a href="/renja"
                             class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Renja</a>
-                        <a href="/dasarhukum"
+                        <a href="/renstra"
                             class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Renstra</a>
                     </div>
                 </div>
@@ -338,9 +338,9 @@
                     Produk Hukum
                 </button>
                 <div x-show="isHukumOpen" class="pl-4" x-transition>
-                    <a href="#"
+                    <a href="/perbup"
                         class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Perbup</a>
-                    <a href="#"
+                    <a href="/perda"
                         class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Perda</a>
                 </div>
                 <a href="/berita"
